@@ -1,10 +1,11 @@
 import praw
+import config
 
 
 def bot_login():
-    r = praw.Reddit(client_id='X3Ie9jxGC6Ww0w',
-                    client_secret='B_hCvDGwrJBtxCfrp9_J7nnOgEg',
-                    user_agent='praw_tut',
-                    username='Bot_G',
-                    password='SAIRAM369')
+    r = praw.Reddit(client_id=config.client_id,
+                    client_secret=config.client_secret,
+                    user_agent=config.user_agent,
+                    username=config.username,
+                    password=config.password)
     return r
